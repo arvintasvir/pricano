@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* فونت فارسی شبنم */
+@font-face {
+  font-family: 'Shabnam';
+  src: url('/fonts/Shabnam.woff2') format('woff2');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Shabnam';
+  src: url('/fonts/Shabnam-Bold.woff2') format('woff2');
+  font-weight: 700;
+}
+
+body {
+  font-family: 'Shabnam', sans-serif;
+  direction: rtl;
+}
+
+/* افکت چشمک‌زن برای دکمه */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: 0.4; }
+}
+
+.blink-animation {
+  animation: blink 1s infinite;
+}
+
+/* اسلاید هنگام ورود */
+@keyframes slide-in {
+  0%   { transform: translateY(-100%); opacity: 0; }
+  100% { transform: translateY(0);     opacity: 1; }
+}
+
+.animate-slide-in {
+  animation: slide-in 1s ease-out forwards;
+}
+
+@keyframes border-glow {
+  0% {
+    border-color: #ff9800;
+    box-shadow: 0 0 0px rgba(255, 152, 0, 0.3);
+  }
+  50% {
+    border-color: #ff5722;
+    box-shadow: 0 0 15px rgba(255, 87, 34, 0.5);
+  }
+  100% {
+    border-color: #ff9800;
+    box-shadow: 0 0 0px rgba(255, 152, 0, 0.3);
+  }
+}
+
+.animate-border-glow {
+  animation: border-glow 2.5s infinite ease-in-out;
+}
+/* اسلایدها به نوبت نمایش داده میشن */
+@keyframes fadeSlider {
+  0%   { opacity: 1; }
+  20%  { opacity: 1; }
+  25%  { opacity: 0; }
+  95%  { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.slide {
+  animation-name: fadeSlider;
+  animation-duration: 16s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  opacity: 0;
+}
+
+.slide-0 { animation-delay: 0s; }
+.slide-1 { animation-delay: 4s; }
+.slide-2 { animation-delay: 8s; }
+.slide-3 { animation-delay: 12s; }
