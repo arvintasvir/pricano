@@ -107,29 +107,33 @@ export default function Home() {
       </Head> 
 
       {/* 🔶 نوار زرد رنگ بالا */}
-      <div className="bg-yellow-400 py-2 px-4 flex flex-row-reverse items-center justify-between overflow-hidden relative">
-        <div className="flex items-center gap-2 ml-4">
-          <div className="blink-animation">
-            <button className="bg-black text-yellow-400 px-3 py-1 rounded-lg font-semibold text-sm h-9">
-              فرصت طلایی ثبت‌نام رایگان
-            </button>
-          </div>
-          <div className="bg-black text-white px-4 py-1 rounded-lg font-bold text-sm text-center w-28 h-9 flex items-center justify-center">
-            <span id="timer">{formatTime(timeLeft)}</span>
-          </div>
-        </div>
-        <div className="flex gap-6 items-center text-sm font-medium text-black">
-          <div className="flex gap-1 items-center">
-            <span className="text-red-600 animate-ping">📢</span> هر کلیک ، یک قدم تا برنده شدن!
-          </div>
-          <div className="flex gap-1 items-center">
-            <span className="text-green-600 animate-ping">💸</span> اونی برنده میشه که هوشمندانه کلیک کنه!
-          </div>
-          <div className="flex gap-1 items-center">
-            <span className="text-blue-600 animate-ping">🎁</span> زمان حراجی محدوده ، جا نمونی!
-          </div>
-        </div>
-      </div>
+<div className="bg-yellow-400 py-2 px-4 flex flex-col md:flex-row-reverse items-center justify-between gap-4 md:gap-0 overflow-hidden relative">
+
+  {/* ✅ تایمر و دکمه - ترتیب بدون تغییر */}
+  <div className="flex items-center gap-2 ml-4">
+    <div className="blink-animation">
+      <button className="bg-black text-yellow-400 px-3 py-1 rounded-lg font-semibold text-sm h-9 whitespace-nowrap">
+        فرصت طلایی ثبت‌نام رایگان
+      </button>
+    </div>
+    <div className="bg-black text-white px-4 py-1 rounded-lg font-bold text-sm text-center w-28 h-9 flex items-center justify-center">
+      <span id="timer">{formatTime(timeLeft)}</span>
+    </div>
+  </div>
+
+  {/* ✅ متن‌های متحرک - فقط ریسپانسیو */}
+  <div className="flex flex-col sm:flex-row flex-wrap gap-2 sm:gap-6 items-center text-sm font-medium text-black text-center sm:text-right">
+    <div className="flex gap-1 items-center">
+      <span className="text-red-600 animate-ping">📢</span> هر کلیک ، یک قدم تا برنده شدن!
+    </div>
+    <div className="flex gap-1 items-center">
+      <span className="text-green-600 animate-ping">💸</span> اونی برنده میشه که هوشمندانه کلیک کنه!
+    </div>
+    <div className="flex gap-1 items-center">
+      <span className="text-blue-600 animate-ping">🎁</span> زمان حراجی محدوده ، جا نمونی!
+    </div>
+  </div>
+</div>
 
       {/* 🔳 بنرهای تبلیغاتی زیر نوار زرد رنگ */}
       <section className="grid grid-cols-1 md:grid-cols-3 gap-4 px-4 mt-4 mb-4">
