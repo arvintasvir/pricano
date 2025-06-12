@@ -19,26 +19,25 @@ body {
   direction: rtl;
 }
 
-/* افکت چشمک‌زن برای دکمه */
+/* انیمیشن چشمک‌زن */
 @keyframes blink {
   0%, 100% { opacity: 1; }
-  50%      { opacity: 0.4; }
+  50% { opacity: 0.4; }
 }
-
 .blink-animation {
   animation: blink 1s infinite;
 }
 
-/* اسلاید هنگام ورود */
+/* انیمیشن ورود اسلاید */
 @keyframes slide-in {
-  0%   { transform: translateY(-100%); opacity: 0; }
-  100% { transform: translateY(0);     opacity: 1; }
+  0% { transform: translateY(-100%); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
 }
-
 .animate-slide-in {
   animation: slide-in 1s ease-out forwards;
 }
 
+/* درخشش نوار تبلیغات */
 @keyframes border-glow {
   0% {
     border-color: #ff9800;
@@ -53,19 +52,16 @@ body {
     box-shadow: 0 0 0px rgba(255, 152, 0, 0.3);
   }
 }
-
 .animate-border-glow {
   animation: border-glow 2.5s infinite ease-in-out;
 }
-/* اسلایدها به نوبت نمایش داده میشن */
+
+/* اسلایدر خودکار fade */
 @keyframes fadeSlider {
-  0%   { opacity: 1; }
-  20%  { opacity: 1; }
-  25%  { opacity: 0; }
-  95%  { opacity: 0; }
+  0%, 20% { opacity: 1; }
+  25%, 95% { opacity: 0; }
   100% { opacity: 1; }
 }
-
 .slide {
   animation-name: fadeSlider;
   animation-duration: 16s;
@@ -73,7 +69,6 @@ body {
   animation-timing-function: ease-in-out;
   opacity: 0;
 }
-
 .slide-0 { animation-delay: 0s; }
 .slide-1 { animation-delay: 4s; }
 .slide-2 { animation-delay: 8s; }

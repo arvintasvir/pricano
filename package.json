@@ -9,6 +9,9 @@
   },
   "dependencies": {
     "autoprefixer": "^10.4.21",
+    "dayjs": "^1.11.13",
+    "dayjs-jalali": "^0.0.2",
+    "framer-motion": "^12.17.0",
     "next": "13.4.7",
     "postcss": "^8.5.4",
     "react": "18.2.0",
